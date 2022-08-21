@@ -1,8 +1,8 @@
 import requests
 
-# Add key in the key parameter in url before running the script
+# Add key in the key parameter in url before running the script, remove curly brackets
 
-bitcoin_api_url = 'https://api.nomics.com/v1/currencies/ticker?key=&ids=ETH&interval=1d,30d&platform-currency=ETH&per-page=100&page=1'
+bitcoin_api_url = 'https://api.nomics.com/v1/currencies/ticker?key={your_key}&ids=ETH&interval=1d,30d&platform-currency=ETH&per-page=100&page=1'
 response = requests.get(bitcoin_api_url)
 reponse_json = response.json()  
 type(reponse_json)
@@ -19,8 +19,9 @@ print(" PRICE",reponse_json[0]['price'],"TIME-STAMP ",reponse_json[0]['price_tim
 # After this, open documentation of IFTTT webhook and your webhook URL will appear their with the event name you set and your key.
 # Following code will send an HTTP POST request to the IFTTT webhook URL using the requests.post() function and you will get notification on your phone.
 
-#  Make sure that your key is in the URL
+# Make sure that your key is in the URL
+# Add key in the key parameter in url before running the script, remove curly brackets
 
-ifttt_webhook_url = 'https://maker.ifttt.com/trigger/test_event/json/with/key/dU-1vlHhGj78yZmfdsap7P'
+ifttt_webhook_url = 'https://maker.ifttt.com/trigger/test_event/json/with/key/{your_key}'
 requests.post(ifttt_webhook_url)
 
