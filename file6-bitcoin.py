@@ -25,3 +25,5 @@ print(" PRICE",reponse_json[0]['price'],"TIME-STAMP ",reponse_json[0]['price_tim
 ifttt_webhook_url = 'https://maker.ifttt.com/trigger/test_event/json/with/key/{your_key}'
 requests.post(ifttt_webhook_url)
 
+# setting up emergency alerts
+
