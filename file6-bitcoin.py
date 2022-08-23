@@ -35,6 +35,8 @@ from datetime import datetime
 ETH_API_URL = 'https://api.nomics.com/v1/currencies/ticker?key={your_key}&ids=ETH&interval=1d,30d&platform-currency=ETH&per-page=100&page=1'
 IFTTT_WEBHOOKS_URL = 'https://maker.ifttt.com/trigger/{}/with/key/{your_key}'
 
+# you can set currency etherium, bitcoin, dogecoin, etc, depends upon you.
+
 def get_latest_eth_price():
     response = requests.get(ETH_API_URL)
     response_json = response.json()
